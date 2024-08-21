@@ -18,24 +18,24 @@ public class CogValidatorJavaApplication {
         SpringApplication.run(CogValidatorJavaApplication.class, args);
     }
 
-    @Bean
-    public CommandLineRunner commandLineRunner(CogValidationService validationService) {
-        return args -> {
-            if (args.length < 1) {
-                logger.error("Usage: java -jar cog-validator-java-0.0.1.jar <file_path>");
-                System.exit(1);
-            }
-            String filePath = args[0];
-            try {
-                String result = validationService.validateGeoTIFF(filePath);
-                logger.info("Validation result: {}", result);
-                System.out.println(result);
-                System.exit(1);
-            } catch (IOException e) {
-                logger.error("Error validating Cloud Optimized GeoTIFF: {}", e.getMessage());
-                System.exit(0);
-            }
-        };
-    }
+//    @Bean
+//    public CommandLineRunner commandLineRunner(CogValidationService validationService) {
+//        return args -> {
+//            if (args.length < 1) {
+//                logger.error("Usage: java -jar cog-validator-java-0.0.1.jar <file_path>");
+//                System.exit(1);
+//            }
+//            String filePath = args[0];
+//            try {
+//                String result = validationService.validateGeoTIFF(filePath);
+//                logger.info("Validation result: {}", result);
+//                System.out.println(result);
+//                System.exit(1);
+//            } catch (IOException e) {
+//                logger.error("Error validating Cloud Optimized GeoTIFF: {}", e.getMessage());
+//                System.exit(0);
+//            }
+//        };
+//    }
 
 }

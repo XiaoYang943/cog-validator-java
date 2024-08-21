@@ -31,7 +31,9 @@
         <dependency>
             <groupId>org.gdal</groupId>
             <artifactId>gdal</artifactId>
-            <version>3.7.1</version>
+            <version>3.9.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/gdal-3.9.1.jar</systemPath>
         </dependency>
     </dependencies>
 
