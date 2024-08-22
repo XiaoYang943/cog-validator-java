@@ -24,8 +24,8 @@ class CogValidationServiceTest {
     @Test
     void testValidateGeoTIFF_ValidFile() throws ValidateCloudOptimizedGeoTIFFException, IOException {
 
-        String result = validationService.validateGeoTIFF("src/test/resources/london_jpeg75_cog.tif");
-
+//        String result = validationService.validateGeoTIFF("src/test/resources/london_jpeg75_cog.tif");
+        String result = validationService.validateGeoTIFF("src/test/resources/f41078e1_cog.tif");
         assertTrue(result.contains("is a valid cloud optimized GeoTIFF"));
     }
 
